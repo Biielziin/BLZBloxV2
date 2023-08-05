@@ -1,9 +1,9 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Biielziin/BLZBloxV2/main/modules/modules.lua'))()
 
 local Window = Rayfield:CreateWindow({
-  Name = "Temporary DupeWare Script",
-  LoadingTitle = "loading...",
-  LoadingSubtitle = "by @israven",
+  Name = "AFS - Dupe Script",
+  LoadingTitle = "Carregando...",
+  LoadingSubtitle = "by @Bielz",
 })
 
 -- Windows
