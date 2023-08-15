@@ -15,11 +15,7 @@ local Label = Tab:CreateLabel("Status: Desabilitado")
 local Button = Tab:CreateButton({
   Name = "Começar Dataloss",
   Callback = function()
-    local args = {
-      [1] = "\0" .. string.rep("B", 4200000)
-    }
-  
-    game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("SetTutorialDone"):FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme",  Options[Options.Current])
 
     Collapse:Notify({
       Title = "🛑 Iniciado!",
