@@ -19,21 +19,11 @@ local Tab = Window:CreateTab("Menu", 4483362458) -- Title, Image
 
 local Label = Tab:CreateLabel("Status: Desabilitado")
 
-local D = Y.Dropdown({
-  Text = "Versão Dataloss",
-  Callback = function(Value)
-      Options.Current = Value
-  end,
-  Options = {
-      "V1",
-      "V2"
-  }
-})
 
 local Button = Tab:CreateButton({
   Name = "Começar Dataloss",
   Callback = function()
-    
+
     game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme",  Options[Options.Current])
 
     Collapse:Notify({
@@ -45,6 +35,17 @@ local Button = Tab:CreateButton({
 
     Label:Set("Status: Habilitado")
   end,
+})
+
+local D = Y.Dropdown({
+  Text = "Versão Dataloss",
+  Callback = function(Value)
+      Options.Current = Value
+  end,
+  Options = {
+      "V1",
+      "V2"
+  }
 })
 
 local Button = Tab:CreateButton({
